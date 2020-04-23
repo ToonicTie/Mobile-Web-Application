@@ -1,6 +1,6 @@
 var deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', function(event) {
+self.addEventListener('beforeinstallprompt', function(event) {
   console.log('beforeinstallprompt fired');
   event.preventDefault();
   deferredPrompt = event;
