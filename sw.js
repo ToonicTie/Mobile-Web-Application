@@ -1,11 +1,11 @@
 var deferredPrompt;
-
 self.addEventListener('beforeinstallprompt', function(event) {
   console.log('beforeinstallprompt fired');
   event.preventDefault();
   deferredPrompt = event;
   return false;
 });
+
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -16,7 +16,7 @@ self.addEventListener('install', function(event) {
           '/index.html',
           '/src/css/app.css',
           '/src/js/app.js',
-          '/src/images/icons/icon-72x72.png',
+		  '/src/images/icons/icon-72x72.png',
           '/src/images/icons/icon-96x96.png',
           '/src/images/icons/icon-128x128.png',
           '/src/images/icons/icon-144x144.png',
